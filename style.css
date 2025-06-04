@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+    place-content: center center ;
+}
+.map {
+    width: 75%;
+}
+.map path {
+    fill: rgb(255, 255, 255);
+    stroke: rgb(0, 0, 0);
+    stroke-width: 2px;
+}
+.map :hover {
+    fill: brown;
+}
+.map path .act {
+    fill: cornflowerblue;
+}
+.map path .act {
+    fill: rgb(100, 237, 141);
+}
+.map path .act {
+    fill: rgb(237, 200, 100);
+}
+.map path .act {
+    fill: rgb(171, 100, 237);
+}
+.map path .act {
+    fill: rgb(237, 121, 100);
+}
