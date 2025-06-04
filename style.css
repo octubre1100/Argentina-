@@ -13,18 +13,18 @@ body {
 .map :hover {
     fill: brown;
 }
-.map path .act {
+.map path.pam.A {
     fill: cornflowerblue;
 }
-.map path .act {
+.map path.pat.E{
     fill: rgb(100, 237, 141);
 }
-.map path .act {
+.map path.cuyo.I{
     fill: rgb(237, 200, 100);
 }
-.map path .act {
+.map path.nea.O{
     fill: rgb(171, 100, 237);
 }
-.map path .act {
+.map path.noa.U{
     fill: rgb(237, 121, 100);
 }
