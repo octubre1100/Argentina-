@@ -25,6 +25,21 @@ body {
 .map path.noa.U{
     fill: rgb(237, 121, 100);
 }
+.map path.muyalto.Q {
+    fill: red;
+}
+.map path.alto.W {
+    fill: rgb(190, 59, 59);
+}
+.map path.medio.R {
+    fill: rgb(131, 74, 74);
+}
+.map path.bajo.T {
+    fill: rgb(104, 65, 65);
+}
+.map path.nulo.Y {
+    fill: rgb(255, 255, 255);
+}
 .map path:hover {
     fill: brown !important;
 }
