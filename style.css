@@ -26,19 +26,19 @@ body {
     fill: rgb(237, 121, 100);
 }
 .map path.muyalto.Q {
-    fill: red;
+    fill: rgb(220, 28, 19);
 }
 .map path.alto.W {
-    fill: rgb(190, 59, 59);
+    fill: rgb(234, 76, 70);
 }
 .map path.medio.R {
-    fill: rgb(131, 74, 74);
+    fill: rgb(240, 116, 112);
 }
 .map path.bajo.T {
-    fill: rgb(104, 65, 65);
+    fill: rgb(241, 149, 155);
 }
 .map path.nulo.Y {
-    fill: rgb(255, 255, 255);
+    fill: rgb(246, 189, 192);
 }
 .map path:hover {
     fill: brown !important;
