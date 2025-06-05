@@ -93,3 +93,36 @@ butonC.onclick = function () {
     cancer = true;
   }
 };
+const regionInfo = {
+  ARE: {
+    title: "Entre Ríos",
+    description:
+      "Entre Ríos es una provincia ubicada en la región mesopotámica de Argentina, conocida por sus ríos y paisajes naturales.",
+  },
+  ARA: {
+    title: "Salta",
+    description:
+      "Salta se encuentra en el noroeste argentino y es famosa por su arquitectura colonial y paisajes montañosos.",
+  },
+  // Agrega las demás regiones aquí
+};
+
+document.querySelectorAll(".map path").forEach((path) => {
+  path.addEventListener("click", () => {
+    const regionId = path.id;
+    const info = regionInfo[regionId];
+    if (info) {
+      const dialog = document.getElementById("infoDialog");
+      const content = document.getElementById("dialogContent");
+      content.innerHTML = `
+        <h2>${info.title}</h2>
+        <p>${info.description}</p>
+      `;
+      dialog.showModal();
+    } else {
+      console.warn(
+        `No se encontró información para la región con ID: ${regionId}`
+      );
+    }
+  });
+});
