@@ -40,6 +40,15 @@ body {
 .map path.nulo.Y {
     fill: rgb(246, 189, 192);
 }
+.map path.high.abc {
+    fill: rgb(220, 28, 19);
+}
+.map path.mid.acb {
+     fill: rgb(234, 76, 70);
+}
+.map path.low.cba {
+    fill: rgb(240, 116, 112);
+}
 .map path:hover {
     fill: brown !important;
 }

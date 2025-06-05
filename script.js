@@ -16,6 +16,12 @@ butonR.onclick = function () {
     nulo.forEach((el) => el.classList.toggle("Y"));
     agro = false;
   }
+  if (cancer == true) {
+    high.forEach((el) => el.classList.toggle("abc"));
+    mid.forEach((el) => el.classList.toggle("acb"));
+    low.forEach((el) => el.classList.toggle("cba"));
+    cancer = false;
+  }
   if (regi == false) {
     pam.forEach((el) => el.classList.toggle("A"));
     pat.forEach((el) => el.classList.toggle("E"));
@@ -42,6 +48,12 @@ butonA.onclick = function () {
     console.log("anda");
     regi = false;
   }
+  if (cancer == true) {
+    high.forEach((el) => el.classList.toggle("abc"));
+    mid.forEach((el) => el.classList.toggle("acb"));
+    low.forEach((el) => el.classList.toggle("cba"));
+    cancer = false;
+  }
   if (agro == false) {
     muyalto.forEach((el) => el.classList.toggle("Q"));
     alto.forEach((el) => el.classList.toggle("W"));
@@ -50,5 +62,34 @@ butonA.onclick = function () {
     nulo.forEach((el) => el.classList.toggle("Y"));
     agro = true;
     console.log("anda");
+  }
+};
+let high = document.querySelectorAll(".high");
+let mid = document.querySelectorAll(".mid");
+let low = document.querySelectorAll(".low");
+let cancer = false;
+butonC.onclick = function () {
+  if (regi == true) {
+    pam.forEach((el) => el.classList.toggle("A"));
+    pat.forEach((el) => el.classList.toggle("E"));
+    cuyo.forEach((el) => el.classList.toggle("I"));
+    nea.forEach((el) => el.classList.toggle("O"));
+    noa.forEach((el) => el.classList.toggle("U"));
+    console.log("anda");
+    regi = false;
+  }
+  if (agro == true) {
+    muyalto.forEach((el) => el.classList.toggle("Q"));
+    alto.forEach((el) => el.classList.toggle("W"));
+    medio.forEach((el) => el.classList.toggle("R"));
+    bajo.forEach((el) => el.classList.toggle("T"));
+    nulo.forEach((el) => el.classList.toggle("Y"));
+    agro = false;
+  }
+  if (cancer == false) {
+    high.forEach((el) => el.classList.toggle("abc"));
+    mid.forEach((el) => el.classList.toggle("acb"));
+    low.forEach((el) => el.classList.toggle("cba"));
+    cancer = true;
   }
 };
