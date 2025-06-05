@@ -10,9 +10,6 @@ body {
     stroke: rgb(0, 0, 0);
     stroke-width: 2px;
 }
-.map :hover {
-    fill: brown;
-}
 .map path.pam.A {
     fill: cornflowerblue;
 }
@@ -27,4 +24,7 @@ body {
 }
 .map path.noa.U{
     fill: rgb(237, 121, 100);
+}
+.map path:hover {
+    fill: brown !important;
 }
