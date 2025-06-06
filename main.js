@@ -95,6 +95,117 @@ const regionInfo = {
       "Salta se encuentra en el noroeste argentino y es famosa por su arquitectura colonial y paisajes montañosos.",
   },
   // Agregá más regiones aquí
+  ARY: {
+    title: "Jujuy",
+    description:
+      "",
+  },
+  ARP: {
+    title: "Formosa",
+    description:
+      "",
+  },
+  ARN: {
+    title: "Misiones",
+    description:
+      "",
+  },
+  ARH: {
+    title: "Chaco",
+    description:
+      "",
+  },
+  ARW: {
+    title: "Corrientes",
+    description:
+      "",
+  },
+  ARK: {
+    title: "Catamarca",
+    description:
+      "",
+  },
+  ARF: {
+    title: "La Rioja",
+    description: 
+      "",
+  },
+  ARJ: {
+    title: "San Juan",
+    description:
+      "",
+  },
+  ARM: {
+    title: "Mendoza",
+    description:
+      "",
+  },
+  ARQ: {
+    title: "Neuquén",
+    description:
+      "",
+  },
+  ARU: {
+    title: "Chubut",
+    description: 
+      "",
+  },
+  ARR: {
+    title: "Río Negro",
+    description:
+      "",
+  },
+  ARZ: {
+    title: "Santa Cruz",
+    description:
+      "",
+  },
+  ARV: {
+    title: "Tierra del Fuego",
+    description:
+      "",
+  },
+  ARB: {
+    title: "Buenos Aires",
+    description:
+      "",
+  },
+  ARC: {
+    title: "CABA",
+    description:
+      "",
+  },
+  ARS: {
+    title: "Santa Fe",
+    description: 
+      "",
+  },
+    ART: {
+    title: "Tucumán",
+    description: 
+      "",
+  },
+    ARG: {
+    title: "Santiago del Estero",
+    description: 
+      "",
+  },
+    ARD: {
+    title: "San Luis",
+    description: 
+      "",
+  },
+    ARL: {
+    title: "La Pampa",
+    description: 
+      "",
+  },
+    ARX: {
+    title: "Córdoba",
+    description: 
+      "",
+  },
+  
 };
 
 // Manejador para mostrar información en el diálogo
