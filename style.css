@@ -109,3 +109,30 @@ dialog button:hover {
     transform: translateY(0);
   }
 }
+.legend {
+  margin: 2rem;
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: fit-content;
+}
+.legend h3 {
+  margin-top: 0;
+}
+.legend-group {
+  margin-bottom: 1rem;
+}
+.legend-group div {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+.legend .color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+}

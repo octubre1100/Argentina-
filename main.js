@@ -69,6 +69,7 @@ regionButton.onclick = () => {
   if (state.cancer) toggleCancer();
   if (!state.regi) toggleRegiones();
   infotext.innerHTML = "Aqui se dividió el mapa en las regiones geograficas.";
+  showLegend("regiones");
 };
 
 agroButton.onclick = () => {
@@ -77,6 +78,7 @@ agroButton.onclick = () => {
   if (!state.agro) toggleAgro();
   infotext.innerHTML =
     "Aqui se dividió el mapa según el nivel estimado de uso de agroquimicos.";
+  showLegend("agro");
 };
 
 cancerButton.onclick = () => {
@@ -85,6 +87,7 @@ cancerButton.onclick = () => {
   if (!state.cancer) toggleCancer();
   infotext.innerHTML =
     "Aqui se dividió el mapa según cuanto aportan al PIB cada provincia.";
+  showLegend("cancer");
 };
 
 // Información de regiones en el mapa
@@ -214,3 +217,24 @@ document.querySelectorAll(".map path").forEach((path) => {
     dialog.showModal();
   });
 });
+const legendGroups = {
+  regiones: document.querySelector(".legend-group.regiones"),
+  agro: document.querySelector(".legend-group.agro"),
+  cancer: document.querySelector(".legend-group.cancer"),
+};
+
+// Oculta todas las leyendas
+function hideAllLegends() {
+  Object.values(legendGroups).forEach((group) => {
+    group.style.display = "none";
+  });
+}
+
+// Mostrar solo una
+function showLegend(name) {
+  hideAllLegends();
+  if (legendGroups[name]) {
+    legendGroups[name].style.display = "block";
+  }
+}
+hideAllLegends();
