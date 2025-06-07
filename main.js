@@ -87,7 +87,7 @@ const regionInfo = {
   ARE: {
     title: "Entre Ríos",
     description:
-      "Entre Ríos es una provincia ubicada en la región mesopotámica de Argentina, conocida por sus ríos y paisajes naturales.",
+      "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas",
   },
   ARA: {
     title: "Salta",
@@ -98,7 +98,7 @@ const regionInfo = {
   ARY: {
     title: "Jujuy",
     description:
-      "",
+      "Realizan como politica una legislación ambiental activa",
   },
   ARP: {
     title: "Formosa",
@@ -108,17 +108,17 @@ const regionInfo = {
   ARN: {
     title: "Misiones",
     description:
-      "",
+      "La regulacion que toma con el uso de agroquimicos es la prohibición total de la aplicación aérea de plaguicidas",
   },
   ARH: {
     title: "Chaco",
     description:
-      "",
+      "Como medida, ellos realizan una legislación parcial",
   },
   ARW: {
     title: "Corrientes",
     description:
-      "",
+      "En esta provincia hay una regulación local moderada",
   },
   ARK: {
     title: "Catamarca",
@@ -128,7 +128,7 @@ const regionInfo = {
   ARF: {
     title: "La Rioja",
     description: 
-      "",
+      "En dicha provincia toma como medida una regulación parcial	",
   },
   ARJ: {
     title: "San Juan",
@@ -143,7 +143,7 @@ const regionInfo = {
   ARQ: {
     title: "Neuquén",
     description:
-      "",
+      "Su medida es simple, realizar una escasa producción extensiva",
   },
   ARU: {
     title: "Chubut",
@@ -153,7 +153,7 @@ const regionInfo = {
   ARR: {
     title: "Río Negro",
     description:
-      "",
+      "Allí realizan una regulación frutícola puntual	",
   },
   ARZ: {
     title: "Santa Cruz",
@@ -168,7 +168,7 @@ const regionInfo = {
   ARB: {
     title: "Buenos Aires",
     description:
-      "",
+      "La política llevada a cabo con el uso de agroquímicos es ls restricción de 2000 metros para la aplicación aérea de plaguicidas",
   },
   ARC: {
     title: "CABA",
@@ -178,7 +178,7 @@ const regionInfo = {
   ARS: {
     title: "Santa Fe",
     description: 
-      "",
+      "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas	",
   },
     ART: {
     title: "Tucumán",
@@ -198,12 +198,12 @@ const regionInfo = {
     ARL: {
     title: "La Pampa",
     description: 
-      "",
+      "La principal política es la restricción de 1000 m en aplicaciones aéreas",
   },
     ARX: {
     title: "Córdoba",
     description: 
-      "",
+      "Esta tiene como regulación proyectos de monitoreo, sin restricción uniforme	",
   },
   
 };
