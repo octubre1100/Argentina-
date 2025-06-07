@@ -92,11 +92,15 @@ cancerButton.onclick = () => {
 
 // Información de regiones en el mapa
 const regionInfo = {
-  ARE: {
-    title: "Entre Ríos",
-    description:
-      "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas",
-  },
+ ARE: {
+  title: "Entre Ríos",
+  description: "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas",
+  items: [
+    "Prohibición aérea cercana a escuelas",
+    "Controles anuales de uso",
+    "Capacitación obligatoria para aplicadores"
+  ]
+},
   ARA: {
     title: "Salta",
     description:
@@ -211,9 +215,14 @@ document.querySelectorAll(".map path").forEach((path) => {
     const content = document.getElementById("dialogContent");
 
     content.innerHTML = `
-      <h2>${info.title}</h2>
-      <p>${info.description}</p>
-    `;
+  <h2>${info.title}</h2>
+  <p>${info.description}</p>
+  ${
+    info.items
+      ? `<ul>${info.items.map(item => `<li>${item}</li>`).join("")}</ul>`
+      : ""
+  }
+`;
     dialog.showModal();
   });
 });
