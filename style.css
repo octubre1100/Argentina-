@@ -1,4 +1,4 @@
-body {
+/*body {
     background-color: aliceblue;
     place-content: center center ;
 }
@@ -135,4 +135,185 @@ dialog button:hover {
   height: 20px;
   margin-right: 0.5rem;
   border: 1px solid #ccc;
+}*/
+/* ----- RESET GENERAL ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #f4faff;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ----- MAPA ----- */
+.map {
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.map path {
+  fill: white;
+  stroke: #333;
+  stroke-width: 1.5px;
+  transition: fill 0.2s ease;
+}
+
+.map path:hover {
+  fill: brown !important;
+}
+
+/* ----- BOTONES ----- */
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* ----- TEXTO INFORMATIVO ----- */
+.text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ----- LEYENDA ----- */
+.legend {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.legend h3 {
+  margin-bottom: 0.8rem;
+  color: #0077cc;
+  font-size: 1.2rem;
+}
+
+.legend-group {
+  margin-bottom: 1.2rem;
+}
+
+.legend-group strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.legend-group div {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+.legend .color {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* ----- COLORES REGIONALES ----- */
+.map path.pam.A { fill: cornflowerblue; }
+.map path.pat.E { fill: rgb(100, 237, 141); }
+.map path.cuyo.I { fill: rgb(237, 200, 100); }
+.map path.nea.O { fill: rgb(171, 100, 237); }
+.map path.noa.U { fill: rgb(237, 121, 100); }
+
+/* ----- COLORES AGROQUÍMICOS ----- */
+.map path.muyalto.Q { fill: rgb(220, 28, 19); }
+.map path.alto.W { fill: rgb(234, 76, 70); }
+.map path.medio.R { fill: rgb(240, 116, 112); }
+.map path.bajo.T { fill: rgb(241, 149, 155); }
+.map path.nulo.Y { fill: rgb(246, 189, 192); }
+
+/* ----- COLORES PIB/CÁNCER ----- */
+.map path.high.abc { fill: rgb(109, 220, 19); }
+.map path.mid.acb { fill: rgb(164, 214, 71); }
+.map path.low.cba { fill: rgb(217, 240, 112); }
+
+/* ----- DIALOGO ----- */
+dialog#infoDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-out;
+  font-family: "Segoe UI", sans-serif;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#dialogContent h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#dialogContent p {
+  font-size: 1rem;
+  color: #555;
+  margin: 1rem 0;
+}
+
+dialog form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+dialog button {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+dialog button:hover {
+  background-color: #005fa3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  
+  }
+  to {
+    opacity: 1;
+  
+  }
+}
+
