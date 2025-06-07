@@ -3,7 +3,7 @@ body {
     place-content: center center ;
 }
 .map {
-    width: 75%;
+    width: 50%;
 }
 .map path {
     fill: rgb(255, 255, 255);
@@ -41,13 +41,13 @@ body {
     fill: rgb(246, 189, 192);
 }
 .map path.high.abc {
-    fill: rgb(220, 28, 19);
+    fill: rgb(109, 220, 19);
 }
 .map path.mid.acb {
-     fill: rgb(234, 76, 70);
+     fill: rgb(164, 214, 71);
 }
 .map path.low.cba {
-    fill: rgb(240, 116, 112);
+    fill: rgb(217, 240, 112);
 }
 .map path:hover {
     fill: brown !important;
