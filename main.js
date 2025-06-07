@@ -9,7 +9,7 @@ const state = {
 const regionButton = document.getElementById("reg");
 const agroButton = document.getElementById("agro");
 const cancerButton = document.getElementById("canc");
-
+const infotext = document.querySelector(".text");
 // Grupos de elementos
 const groups = {
   pam: document.querySelectorAll(".pam"),
@@ -68,18 +68,23 @@ regionButton.onclick = () => {
   if (state.agro) toggleAgro();
   if (state.cancer) toggleCancer();
   if (!state.regi) toggleRegiones();
+  infotext.innerHTML = "Aqui se dividió el mapa en las regiones geograficas.";
 };
 
 agroButton.onclick = () => {
   if (state.regi) toggleRegiones();
   if (state.cancer) toggleCancer();
   if (!state.agro) toggleAgro();
+  infotext.innerHTML =
+    "Aqui se dividió el mapa según el nivel estimado de uso de agroquimicos.";
 };
 
 cancerButton.onclick = () => {
   if (state.regi) toggleRegiones();
   if (state.agro) toggleAgro();
   if (!state.cancer) toggleCancer();
+  infotext.innerHTML =
+    "Aqui se dividió el mapa según cuanto aportan al PIB cada provincia.";
 };
 
 // Información de regiones en el mapa
@@ -97,13 +102,11 @@ const regionInfo = {
   // Agregá más regiones aquí
   ARY: {
     title: "Jujuy",
-    description:
-      "Realizan como politica una legislación ambiental activa",
+    description: "Realizan como politica una legislación ambiental activa",
   },
   ARP: {
     title: "Formosa",
-    description:
-      "",
+    description: "",
   },
   ARN: {
     title: "Misiones",
@@ -112,33 +115,27 @@ const regionInfo = {
   },
   ARH: {
     title: "Chaco",
-    description:
-      "Como medida, ellos realizan una legislación parcial",
+    description: "Como medida, ellos realizan una legislación parcial",
   },
   ARW: {
     title: "Corrientes",
-    description:
-      "En esta provincia hay una regulación local moderada",
+    description: "En esta provincia hay una regulación local moderada",
   },
   ARK: {
     title: "Catamarca",
-    description:
-      "",
+    description: "",
   },
   ARF: {
     title: "La Rioja",
-    description: 
-      "En dicha provincia toma como medida una regulación parcial	",
+    description: "En dicha provincia toma como medida una regulación parcial	",
   },
   ARJ: {
     title: "San Juan",
-    description:
-      "",
+    description: "",
   },
   ARM: {
     title: "Mendoza",
-    description:
-      "",
+    description: "",
   },
   ARQ: {
     title: "Neuquén",
@@ -147,23 +144,19 @@ const regionInfo = {
   },
   ARU: {
     title: "Chubut",
-    description: 
-      "",
+    description: "",
   },
   ARR: {
     title: "Río Negro",
-    description:
-      "Allí realizan una regulación frutícola puntual	",
+    description: "Allí realizan una regulación frutícola puntual	",
   },
   ARZ: {
     title: "Santa Cruz",
-    description:
-      "",
+    description: "",
   },
   ARV: {
     title: "Tierra del Fuego",
-    description:
-      "",
+    description: "",
   },
   ARB: {
     title: "Buenos Aires",
@@ -172,40 +165,35 @@ const regionInfo = {
   },
   ARC: {
     title: "CABA",
-    description:
-      "",
+    description: "",
   },
   ARS: {
     title: "Santa Fe",
-    description: 
+    description:
       "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas	",
   },
-    ART: {
+  ART: {
     title: "Tucumán",
-    description: 
-      "",
+    description: "",
   },
-    ARG: {
+  ARG: {
     title: "Santiago del Estero",
-    description: 
-      "",
+    description: "",
   },
-    ARD: {
+  ARD: {
     title: "San Luis",
-    description: 
-      "",
+    description: "",
   },
-    ARL: {
+  ARL: {
     title: "La Pampa",
-    description: 
+    description:
       "La principal política es la restricción de 1000 m en aplicaciones aéreas",
   },
-    ARX: {
+  ARX: {
     title: "Córdoba",
-    description: 
+    description:
       "Esta tiene como regulación proyectos de monitoreo, sin restricción uniforme	",
   },
-  
 };
 
 // Manejador para mostrar información en el diálogo
