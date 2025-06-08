@@ -285,10 +285,8 @@ items: [
       "Esta tiene como regulación proyectos de monitoreo, sin restricción uniforme	",
     items: [
     "Soja",
-    "Maiz",
+    "Maiz"
     
-
-
 
   ]
   },
