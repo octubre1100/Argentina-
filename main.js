@@ -92,216 +92,147 @@ cancerButton.onclick = () => {
 
 // Información de regiones en el mapa
 const regionInfo = {
- ARE: {
-  title: "Entre Ríos",
-  description: "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas",
-  items: [
-    "Arroz",
-    "Citricos",
-    "Soja"
-  ]
-},
+  ARE: {
+    title: "Entre Ríos",
+    description:
+      "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas y las fumigaciones cercanas a escuelas rurales",
+    items: ["Arroz", "Citricos", "Soja"],
+  },
   ARA: {
     title: "Salta",
-    description:
-      "Salta se encuentra en el noroeste argentino y es famosa por su arquitectura colonial y paisajes montañosos.",
-    items: [
-    "Soja",
-    "Maíz",
-    "Caña de azucar"
-  ]
+    description: "Normas ambientales y fitosanitarias provinciales",
+    items: ["Soja", "Maíz", "Caña de azucar"],
   },
   // Agregá más regiones aquí
   ARY: {
     title: "Jujuy",
-    description: "Realizan como politica una legislación ambiental activa",
-    items: [
-    "Tabaco" ,
-    "Caña de azucar"
-  ]
+    description:
+      "Realizan como politica una legislación ambiental activa con reglamentos técnicos provinciales con fuerte control en zonas tabacaleras y cañeras.",
+    items: ["Tabaco", "Caña de azucar"],
   },
   ARP: {
     title: "Formosa",
-    description: "",
-    items: [
-    "Algodón",
-    "Soja"
-  ]
+    description:
+      "Ley provincial con zonas de exclusión aérea; énfasis en capacitación de aplicadores.",
+    items: ["Algodón", "Soja"],
   },
   ARN: {
     title: "Misiones",
     description:
-      "La regulacion que toma con el uso de agroquimicos es la prohibición total de la aplicación aérea de plaguicidas",
-    items: [
-    "Yerba mate",
-    "Té",
-    "Tabaco"
-  ]
+      "Prohibición total de fumigaciones aéreas y de uso de glifosato desde 2020; se promueve la agroecología.",
+    items: ["Yerba mate", "Té", "Tabaco"],
   },
   ARH: {
     title: "Chaco",
-    description: "Como medida, ellos realizan una legislación parcial",
-    items: [
-    "Algodón" ,
-    "Soja"
-    
-  ]
+    description:
+      "Ley provincial regula uso y aplicación. Controles en áreas de producción de algodón y soja.",
+    items: ["Algodón", "Soja"],
   },
   ARW: {
     title: "Corrientes",
-    description: "En esta provincia hay una regulación local moderada",
-    items: [
-    "Arroz",
-    "Citrus",
-    "Forestal"
-  ]
+    description:
+      "Leyes de control fitosanitario y ordenanzas locales; se promueve la agricultura orgánica en zonas de cultivo de yerba mate.",
+    items: ["Arroz", "Citrus", "Forestal", "Yerba Mate"],
   },
   ARK: {
     title: "Catamarca",
-    description: "",
-    items: [
-    "Nogal",
-    "Olivo"
-  ]
+    description:
+      "Exige registro provincial de productos, formuladores, aplicadores y depósitos.",
+    items: ["Nogal", "Olivo"],
   },
   ARF: {
     title: "La Rioja",
-    description: "En dicha provincia toma como medida una regulación parcial	",
-    items: [
-    "Olivo",
-    "Vid"
-  ]
+    description:
+      "Proyectos de ley en estudio para establecer distancias mínimas; fuerte presión ambientalista.	",
+    items: ["Olivo", "Vid"],
   },
   ARJ: {
     title: "San Juan",
-    description: "",
-    items: [
-    "Vid",
-    "Olivo"
-  ]
+    description:
+      "Registros de aplicadores y control técnico, pero sin distancias definidas. Se estudia proyecto de ley desde 2023.",
+    items: ["Vid", "Olivo"],
   },
   ARM: {
     title: "Mendoza",
-    description: "",
-    items: [
-    "Vid",
-    "Frutales",
-    "Horticultura"
-  ]
+    description:
+      "Ley provincial; en zonas vitivinícolas se promueve el control integrado; fuerte fiscalización en áreas protegidas.",
+    items: ["Vid", "Frutales", "Horticultura"],
   },
   ARQ: {
     title: "Neuquén",
     description:
-      "Su medida es simple, realizar una escasa producción extensiva",
-    items: [
-    "Frutales",
-    "Pasturas"
-  ]
+      "Legislación sobre residuos peligrosos; sin ley específica sobre agroquímicos, pero sí controles por parte del Ministerio de Producción.",
+    items: ["Frutales", "Pasturas"],
   },
   ARU: {
     title: "Chubut",
-    description: "",
-    items: [
-    "Cerezas",
-    "Berries",
-    "Manzanas",
-    "Horailzas",
-    "Alfalfa"
-  ]
+    description:
+      "Se rige por la ley ambiental general; sin normativa específica sobre agroquímicos.",
+    items: ["Cerezas", "Berries", "Manzanas", "Horailzas", "Alfalfa"],
   },
   ARR: {
     title: "Río Negro",
-    description: "Allí realizan una regulación frutícola puntual	",
-    items: [
-    "Furtad de pepita"
-  ]
+    description:
+      "Ley provincial; se regula especialmente en el Alto Valle por el impacto en frutales.",
+    items: ["Frutas de pepita"],
   },
   ARZ: {
     title: "Santa Cruz",
-    description: "",
-    items: [
-    "FrutalesCerezas",
-    "Hortalizas",
-    "Forrajes",
-    "Frutales clima frio"
-  ]
+    description:
+      "Producción agrícola limitada; sin regulación específica pero bajo marco ambiental.",
+    items: ["Cerezas", "Hortalizas", "Forrajes", "Frutales clima frio"],
   },
   ARV: {
     title: "Tierra del Fuego",
-    description: "",
+    description:
+      "Prácticamente sin agricultura intensiva; no hay normativas específicas.",
   },
   ARB: {
     title: "Buenos Aires",
     description:
-      "La política llevada a cabo con el uso de agroquímicos es ls restricción de 2000 metros para la aplicación aérea de plaguicidas",
-    items: [
-    "Soja",
-    "Maiz",
-    "Trigo"
-  ]
+      "municipios como Pergamino prohíben el glifosato; se creó el OTA (Observatorio Técnico de Agroquímicos).",
+    items: ["Soja", "Maiz", "Trigo"],
   },
   ARC: {
     title: "CABA",
-    description: "",
+    description:
+      "No se permite uso agrícola con agroquímicos; hay ordenanzas que regulan fitosanitarios en espacios verdes.",
   },
   ARS: {
     title: "Santa Fe",
     description:
       "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas	",
-    items: [
-    "Soja",
-    "Maíz",
-    "Trigo"
-  ]
+    items: ["Soja", "Maíz", "Trigo"],
   },
   ART: {
     title: "Tucumán",
-    description: "",
-items: [
-    "Caña de azucar",
-    "Soja"
-  ]
-
+    description:
+      "Regula especialmente cultivos intensivos; exige capacitación obligatoria a aplicadores.",
+    items: ["Caña de azucar", "Soja"],
   },
   ARG: {
     title: "Santiago del Estero",
-    description: "",
-items: [
-    "Soja",
-    "Algodón"
-  
-  ]
-
+    description:
+      "Leyes provinciales + ordenanzas locales; frecuente conflictividad en zonas de expansión agrícola.",
+    items: ["Soja", "Algodón"],
   },
   ARD: {
     title: "San Luis",
-    description: "",
-    items: [
-    "Soja",
-    "Maíz",
-    "Horticultura"
-  ]
+    description:
+      "Regula desde formulación hasta aplicación, se reorganizó control interministerial.",
+    items: ["Soja", "Maíz", "Horticultura"],
   },
   ARL: {
     title: "La Pampa",
     description:
-      "La principal política es la restricción de 1000 m en aplicaciones aéreas",
-    items: [
-    "Soja",
-    "Trigo",
-    "Maíz"
-  ]
+      "Prohíbe aplicación aérea; ordenanzas locales (Santa Rosa, General Pico) amplían controles y zonas de amortiguamiento.",
+    items: ["Soja", "Trigo", "Maíz"],
   },
   ARX: {
     title: "Córdoba",
     description:
-      "Esta tiene como regulación proyectos de monitoreo, sin restricción uniforme	",
-    items: [
-    "Soja",
-    "Maiz"
-    
-
-  ]
+      "Esta tiene como regulación proyectos de monitoreo, distancias mínimas según tipo de producto; fuerte presión social por ampliarlas; restricciones más duras en zonas escolares y rurales.	",
+    items: ["Soja", "Maiz"],
   },
 };
 
@@ -318,10 +249,12 @@ document.querySelectorAll(".map path").forEach((path) => {
 
     content.innerHTML = `
   <h2>${info.title}</h2>
+  <h5>${"Algunas politicas respecto a agroquimicos son:"}</h5>
   <p>${info.description}</p>
+  <p>${"Estos son algunos cultivos destacados:"}</p>
   ${
     info.items
-      ? `<ul>${info.items.map(item => `<li>${item}</li>`).join("")}</ul>`
+      ? `<ul>${info.items.map((item) => `<li>${item}</li>`).join("")}</ul>`
       : ""
   }
 `;

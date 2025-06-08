@@ -136,10 +136,15 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
 }
 
-#dialogContent h2 {
+#dialogContent h2, #dialogContent h5 {
   margin-top: 0;
   font-size: 1.4rem;
   color: #333;
+}
+ #dialogContent h5 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #555;
 }
 
 #dialogContent p {
