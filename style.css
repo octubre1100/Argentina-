@@ -183,9 +183,14 @@ dialog button:hover {
   
   }
 }
-.color.clickable {
+.color.clickable[data-region] {
   cursor: pointer;
 }
+
+.color.clickable:not([data-region]) {
+  cursor: default;
+}
+
 #dialogContent ul {
   list-style: none;
   padding-left: 0;
