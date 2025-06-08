@@ -169,6 +169,11 @@ const regionInfo = {
     title: "Buenos Aires",
     description:
       "La política llevada a cabo con el uso de agroquímicos es ls restricción de 2000 metros para la aplicación aérea de plaguicidas",
+    items: [
+    "Soja",
+    "Maiz",
+    "Trigo"
+  ]
   },
   ARC: {
     title: "CABA",
@@ -200,6 +205,14 @@ const regionInfo = {
     title: "Córdoba",
     description:
       "Esta tiene como regulación proyectos de monitoreo, sin restricción uniforme	",
+    items: [
+    "Soja",
+    "Maiz",
+    
+
+
+
+  ]
   },
 };
 
