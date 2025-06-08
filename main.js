@@ -96,58 +96,107 @@ const regionInfo = {
   title: "Entre Ríos",
   description: "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas",
   items: [
-    "Prohibición aérea cercana a escuelas",
-    "Controles anuales de uso",
-    "Capacitación obligatoria para aplicadores"
+    "Arroz",
+    "Citricos",
+    "Soja"
   ]
 },
   ARA: {
     title: "Salta",
     description:
       "Salta se encuentra en el noroeste argentino y es famosa por su arquitectura colonial y paisajes montañosos.",
+    items: [
+    "Soja",
+    "Maíz",
+    "Caña de azucar"
+  ]
   },
   // Agregá más regiones aquí
   ARY: {
     title: "Jujuy",
     description: "Realizan como politica una legislación ambiental activa",
+    items: [
+    "Tabaco" ,
+    "Caña de azucar"
+  ]
   },
   ARP: {
     title: "Formosa",
     description: "",
+    items: [
+    "Algodón ,
+    "Soja"
+  ]
   },
   ARN: {
     title: "Misiones",
     description:
       "La regulacion que toma con el uso de agroquimicos es la prohibición total de la aplicación aérea de plaguicidas",
+    items: [
+    "Yerba mate",
+    "Té",
+    "Tabaco"
+  ]
   },
   ARH: {
     title: "Chaco",
     description: "Como medida, ellos realizan una legislación parcial",
+    items: [
+    "Algodón ,
+    "Soja",
+    ""
+  ]
   },
   ARW: {
     title: "Corrientes",
     description: "En esta provincia hay una regulación local moderada",
+    items: [
+    "Arroz",
+    "Citrus",
+    "Forestal"
+  ]
   },
   ARK: {
     title: "Catamarca",
     description: "",
+    items: [
+    "Nogal",
+    "Olivo"
+  ]
   },
   ARF: {
     title: "La Rioja",
     description: "En dicha provincia toma como medida una regulación parcial	",
+    items: [
+    "Olivo",
+    "Vid"
+  ]
   },
   ARJ: {
     title: "San Juan",
     description: "",
+    items: [
+    "Vid",
+    "Olivo"
+  ]
   },
   ARM: {
     title: "Mendoza",
     description: "",
+    items: [
+    "Vid",
+    "Frutales",
+    "Horticultura"
+  ]
   },
   ARQ: {
     title: "Neuquén",
     description:
       "Su medida es simple, realizar una escasa producción extensiva",
+    items: [
+    "Frutales",
+    "Pasturas"
+  ]
   },
   ARU: {
     title: "Chubut",
@@ -156,6 +205,9 @@ const regionInfo = {
   ARR: {
     title: "Río Negro",
     description: "Allí realizan una regulación frutícola puntual	",
+    items: [
+    "Furtad de pepita"
+  ]
   },
   ARZ: {
     title: "Santa Cruz",
@@ -183,23 +235,49 @@ const regionInfo = {
     title: "Santa Fe",
     description:
       "La política tomada por dicha provincia es la restricción de 3000 m en aplicaciones aéreas	",
+    items: [
+    "Soja",
+    "Maíz",
+    "Trigo"
+  ]
   },
   ART: {
     title: "Tucumán",
     description: "",
+items: [
+    "Caña de azucar",
+    "Soja"
+  ]
+
   },
   ARG: {
     title: "Santiago del Estero",
     description: "",
+items: [
+    "Soja",
+    "Algodón",
+    ""
+  ]
+
   },
   ARD: {
     title: "San Luis",
     description: "",
+    items: [
+    "Soja",
+    "Maíz",
+    "Horticultura"
+  ]
   },
   ARL: {
     title: "La Pampa",
     description:
       "La principal política es la restricción de 1000 m en aplicaciones aéreas",
+    items: [
+    "Soja",
+    "Trigo",
+    "Maíz"
+  ]
   },
   ARX: {
     title: "Córdoba",
