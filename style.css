@@ -183,4 +183,19 @@ dialog button:hover {
   
   }
 }
+.color.clickable {
+  cursor: pointer;
+}
+#dialogContent ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#dialogContent li::before {
+  content: "•";
+  color: #0077cc;
+  display: inline-block;
+  width: 1em;
+  margin-left: 1em;
+}
 

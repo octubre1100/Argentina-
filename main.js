@@ -235,6 +235,33 @@ const regionInfo = {
     items: ["Soja", "Maiz"],
   },
 };
+const regionGeneralInfo = {
+  pam: {
+    title: "Región Pampeana",
+    description:
+      "Incluye provincias con fuerte desarrollo agrícola-ganadero, alta densidad poblacional y gran aporte al PIB nacional.",
+  },
+  pat: {
+    title: "Región Patagónica",
+    description:
+      "Zona de baja densidad poblacional y clima frío, con economía basada en hidrocarburos, turismo y fruticultura.",
+  },
+  cuyo: {
+    title: "Región de Cuyo",
+    description:
+      "Caracterizada por clima árido y economías vitivinícolas. Importante actividad minera en algunas provincias.",
+  },
+  nea: {
+    title: "Región del NEA",
+    description:
+      "Región subtropical, con producción forestal, yerba mate, té y algodón. Alta biodiversidad y riqueza hídrica.",
+  },
+  noa: {
+    title: "Región del NOA",
+    description:
+      "Zona montañosa con cultura andina, producción agrícola en los valles y minería. Alta diversidad cultural.",
+  },
+};
 
 // Manejador para mostrar información en el diálogo
 document.querySelectorAll(".map path").forEach((path) => {
@@ -282,3 +309,20 @@ function showLegend(name) {
   }
 }
 hideAllLegends();
+document.querySelectorAll(".color.clickable").forEach((el) => {
+  el.addEventListener("click", () => {
+    const regionKey = el.dataset.region;
+    const info = regionGeneralInfo[regionKey];
+
+    if (!info) return;
+
+    const dialog = document.getElementById("infoDialog");
+    const content = document.getElementById("dialogContent");
+
+    content.innerHTML = `
+      <h2>${info.title}</h2>
+      <p>${info.description}</p>
+    `;
+    dialog.showModal();
+  });
+});
