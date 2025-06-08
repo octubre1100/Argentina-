@@ -65,29 +65,44 @@ function toggleCancer() {
 
 // Acciones por botón
 regionButton.onclick = () => {
+  if (state.regi) {
+    animateMapShake();
+    return;
+  }
   if (state.agro) toggleAgro();
   if (state.cancer) toggleCancer();
-  if (!state.regi) toggleRegiones();
+  toggleRegiones();
   infotext.innerHTML = "Aqui se dividió el mapa en las regiones geograficas.";
   showLegend("regiones");
+  animateMapPulse();
 };
 
 agroButton.onclick = () => {
+  if (state.agro) {
+    animateMapShake();
+    return;
+  }
   if (state.regi) toggleRegiones();
   if (state.cancer) toggleCancer();
-  if (!state.agro) toggleAgro();
+  toggleAgro();
   infotext.innerHTML =
     "Aqui se dividió el mapa según el nivel estimado de uso de agroquimicos.";
   showLegend("agro");
+  animateMapPulse();
 };
 
 cancerButton.onclick = () => {
+  if (state.cancer) {
+    animateMapShake();
+    return;
+  }
   if (state.regi) toggleRegiones();
   if (state.agro) toggleAgro();
-  if (!state.cancer) toggleCancer();
+  toggleCancer();
   infotext.innerHTML =
     "Aqui se dividió el mapa según cuanto aportan al PIB cada provincia.";
   showLegend("cancer");
+  animateMapPulse();
 };
 
 // Información de regiones en el mapa
@@ -347,3 +362,65 @@ document.querySelectorAll(".color.clickable").forEach((el) => {
     });
   });
 });
+const resetButton = document.getElementById("reset");
+
+resetButton.onclick = () => {
+  // Añadir clase para animación
+  const mapElement = document.querySelector(".map");
+  mapElement.classList.add("animate-reset");
+
+  // Quitar clase de animación luego de que termine
+  mapElement.addEventListener(
+    "animationend",
+    () => {
+      mapElement.classList.remove("animate-reset");
+    },
+    { once: true }
+  );
+
+  // Quitar clases activas
+  Object.entries(groups).forEach(([key, nodeList]) => {
+    nodeList.forEach((el) => {
+      el.classList.remove("A", "E", "I", "O", "U");
+      el.classList.remove("Q", "W", "R", "T", "Y");
+      el.classList.remove("abc", "acb", "cba");
+      el.classList.remove("highlight");
+    });
+  });
+
+  // Resetear estado
+  state.agro = false;
+  state.cancer = false;
+  state.regi = false;
+
+  hideAllLegends();
+
+  // Cerrar diálogo
+  const dialog = document.getElementById("infoDialog");
+  if (dialog.open) dialog.close();
+
+  // Restaurar texto
+  infotext.innerHTML = "Haz clic en un botón para visualizar el mapa.";
+};
+function animateMapPulse() {
+  const mapElement = document.querySelector(".map");
+  mapElement.classList.add("animate-pulse");
+  mapElement.addEventListener(
+    "animationend",
+    () => {
+      mapElement.classList.remove("animate-pulse");
+    },
+    { once: true }
+  );
+}
+function animateMapShake() {
+  const mapElement = document.querySelector(".map");
+  mapElement.classList.add("animate-shake");
+  mapElement.addEventListener(
+    "animationend",
+    () => {
+      mapElement.classList.remove("animate-shake");
+    },
+    { once: true }
+  );
+}
