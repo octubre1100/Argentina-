@@ -124,7 +124,7 @@ const regionInfo = {
     title: "Formosa",
     description: "",
     items: [
-    "Algodón ,
+    "Algodón",
     "Soja"
   ]
   },
@@ -143,8 +143,8 @@ const regionInfo = {
     description: "Como medida, ellos realizan una legislación parcial",
     items: [
     "Algodón ,
-    "Soja",
-    ""
+    "Soja"
+    
   ]
   },
   ARW: {
@@ -255,8 +255,8 @@ items: [
     description: "",
 items: [
     "Soja",
-    "Algodón",
-    ""
+    "Algodón"
+  
   ]
 
   },
