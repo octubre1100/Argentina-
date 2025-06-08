@@ -142,7 +142,7 @@ const regionInfo = {
     title: "Chaco",
     description: "Como medida, ellos realizan una legislación parcial",
     items: [
-    "Algodón ,
+    "Algodón" ,
     "Soja"
     
   ]
@@ -201,6 +201,13 @@ const regionInfo = {
   ARU: {
     title: "Chubut",
     description: "",
+    items: [
+    "Cerezas",
+    "Berries",
+    "Manzanas",
+    "Horailzas",
+    "Alfalfa"
+  ]
   },
   ARR: {
     title: "Río Negro",
@@ -212,6 +219,12 @@ const regionInfo = {
   ARZ: {
     title: "Santa Cruz",
     description: "",
+    items: [
+    "FrutalesCerezas",
+    "Hortalizas",
+    "Forrajes",
+    "Frutales clima frio"
+  ]
   },
   ARV: {
     title: "Tierra del Fuego",
