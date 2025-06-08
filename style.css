@@ -198,4 +198,10 @@ dialog button:hover {
   width: 1em;
   margin-left: 1em;
 }
+.map path.highlight {
+  stroke: black;
+  stroke-width: 3px;
+  filter: brightness(1.3);
+}
+
 

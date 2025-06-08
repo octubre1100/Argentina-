@@ -310,10 +310,10 @@ function showLegend(name) {
 }
 hideAllLegends();
 document.querySelectorAll(".color.clickable").forEach((el) => {
+  // Mostrar info general si tiene regionKey
   el.addEventListener("click", () => {
     const regionKey = el.dataset.region;
     const info = regionGeneralInfo[regionKey];
-
     if (!info) return;
 
     const dialog = document.getElementById("infoDialog");
@@ -324,5 +324,26 @@ document.querySelectorAll(".color.clickable").forEach((el) => {
       <p>${info.description}</p>
     `;
     dialog.showModal();
+  });
+
+  // Resaltar provincias al pasar el mouse
+  el.addEventListener("mouseenter", () => {
+    const group = el.dataset.group;
+    const cls = el.dataset.class;
+    if (!group || !cls) return;
+
+    document.querySelectorAll(`.map path.${group}.${cls}`).forEach((path) => {
+      path.classList.add("highlight");
+    });
+  });
+
+  el.addEventListener("mouseleave", () => {
+    const group = el.dataset.group;
+    const cls = el.dataset.class;
+    if (!group || !cls) return;
+
+    document.querySelectorAll(`.map path.${group}.${cls}`).forEach((path) => {
+      path.classList.remove("highlight");
+    });
   });
 });
