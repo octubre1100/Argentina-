@@ -13,7 +13,9 @@ body {
   align-items: center;
   padding: 2rem;
 }
-
+.textin, .text.textin {
+  font-size: 1.2rem;
+}
 /* ----- MAPA ----- */
 .map {
   width: 90%;
@@ -40,7 +42,7 @@ button {
   margin: 0.5rem;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -51,7 +53,7 @@ button:hover {
 
 /* ----- TEXTO INFORMATIVO ----- */
 .text {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #333;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -70,9 +72,11 @@ button:hover {
 .legend h3 {
   margin-bottom: 0.8rem;
   color: #0077cc;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
-
+.refer {
+  font-size: 1.3rem;
+}
 .legend-group {
   margin-bottom: 1.2rem;
 }
@@ -81,6 +85,7 @@ button:hover {
   display: block;
   margin-bottom: 0.3rem;
   color: #333;
+  font-size: 1.5rem;
 }
 
 .legend-group div {
@@ -138,17 +143,17 @@ dialog::backdrop {
 
 #dialogContent h2, #dialogContent h5 {
   margin-top: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #333;
 }
  #dialogContent h5 {
   margin-top: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #555;
 }
 
 #dialogContent p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #555;
   margin: 1rem 0;
 }
@@ -164,7 +169,7 @@ dialog button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -194,6 +199,7 @@ dialog button:hover {
 #dialogContent ul {
   list-style: none;
   padding-left: 0;
+  font-size: 1.2rem; /* Aumentado */
 }
 
 #dialogContent li::before {
@@ -202,7 +208,9 @@ dialog button:hover {
   display: inline-block;
   width: 1em;
   margin-left: 1em;
+  font-size: 1.2rem; /* Aumentado también para el bullet */
 }
+
 .map path.highlight {
   stroke: black;
   stroke-width: 3px;
@@ -278,6 +286,23 @@ button#reset:hover {
 .map.animate-shake {
   animation: shake 0.4s ease;
 }
+.torso {
+  width: 400px; /* o ajusta a tu preferencia */
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.torso svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: none;
+}
+.torso path.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 
 
 

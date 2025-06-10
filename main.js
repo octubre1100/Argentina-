@@ -249,6 +249,24 @@ const regionInfo = {
       "Esta tiene como regulación proyectos de monitoreo, distancias mínimas según tipo de producto; fuerte presión social por ampliarlas; restricciones más duras en zonas escolares y rurales.	",
     items: ["Soja", "Maiz"],
   },
+  path1: {
+    title: "Cancer",
+    description:
+      "Se han encontrado asociaciones entre exposición a agroquímicos y distintos tipos de cáncer: leucemias, linfomas no Hodgkin, de cerebro, mama, pulmón, hígado, riñón, páncreas, próstata y piel",
+  },
+  path41: {
+    title: "Problemas respiratorios",
+    description: "",
+  },
+  path42: {
+    title: "Enfermedades neurológicas",
+    description:
+      "Se han detectado que el uso de agroquimicos aumenta las posibilidades de:",
+  },
+  path43: {
+    title: "Genetica",
+    description: "",
+  },
 };
 const regionGeneralInfo = {
   pam: {
@@ -400,7 +418,7 @@ resetButton.onclick = () => {
   if (dialog.open) dialog.close();
 
   // Restaurar texto
-  infotext.innerHTML = "Haz clic en un botón para visualizar el mapa.";
+  infotext.innerHTML = "Este es un mapa de Argentina donde puedes hacer click";
 };
 function animateMapPulse() {
   const mapElement = document.querySelector(".map");
@@ -424,3 +442,65 @@ function animateMapShake() {
     { once: true }
   );
 }
+// Marcar visualmente los path con IDs conocidos como clickeables
+["cora", "pul", "cer", "adn"].forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) el.classList.add("clickable");
+});
+
+const healthInfo = {
+  cora: {
+    title: "Cancer",
+    description:
+      "Se han encontrado asociaciones entre exposición a agroquímicos y distintos tipos de cáncer:",
+    items: [
+      "Leucemias",
+      "Linfomas Hodgkin",
+      "Cerebro",
+      "Mama",
+      "Pulmón",
+      "Hígado",
+      "Riñón",
+      "Páncreas",
+      "Próstata",
+      "Piel",
+    ],
+  },
+  pul: {
+    title: "Problemas respiratorios",
+    description: "Asma y bronquitis: Aumentan en zonas cercanas a fumigación",
+  },
+  cer: {
+    title: "Enfermedades neurológicas",
+    description:
+      "Se han detectado que la exposicion a agroquimicos aumenta las posibilidades de:",
+    items: ["Parkinson", "Alzheimer", "TDAH y dislexia", "Neuropatias"],
+  },
+  adn: {
+    title: "Genetica",
+    description: "La exposicion a agroquimicos puede provocar:",
+    items: ["Defectos congénitos", "Infertilidad masculina", "Malformaciones"],
+  },
+};
+document.querySelectorAll(".torso path").forEach((path) => {
+  path.addEventListener("click", () => {
+    const healthId = path.id;
+    const info = healthInfo[healthId];
+    if (!info)
+      return console.warn(`No se encontró información para: ${regionId}`);
+
+    const dialog = document.getElementById("infoDialog");
+    const content = document.getElementById("dialogContent");
+
+    content.innerHTML = `
+  <h2>${info.title}</h2>
+  <p>${info.description}</p>
+  ${
+    info.items
+      ? `<ul>${info.items.map((item) => `<li>${item}</li>`).join("")}</ul>`
+      : ""
+  }
+`;
+    dialog.showModal();
+  });
+});
